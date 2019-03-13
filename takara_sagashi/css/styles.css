@@ -1,0 +1,60 @@
+body {
+  background: #2B4570;
+  font-family: 'Avenir;'
+  font-size: 16px;
+}
+
+.box + .box {
+  margin-left: 40px;
+}
+
+.container {
+  /* 85 * 3 + 40 * 2 */
+  width: 335px;
+  margin: 30px auto;
+}
+
+.boxes {
+  font-size: 0px;
+  margin-bottom: 40px;
+}
+
+.box {
+  cursor: pointer;
+}
+
+.shake:hover {
+  animation-name: shake;
+  animation-duration: 0.15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: rotate(8deg) translate(1px, 0);}
+    50% { transform: rotate(-8deg) translate(-1px, 0);}
+    100% { transform: rotate(8deg) translate(1px, 0);}
+}
+
+.box.disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+#btn {
+  text-decoration: none;
+  display: block;
+  width: 335px;
+  height: 40px;
+  border: 2px solid #FFFFFF;
+  color: #E4E3D3;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#btn.inactive {
+  opacity: 0.2;
+  cursor: default;
+}

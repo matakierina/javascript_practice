@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #75B9BE;
+  font-family: 'Verdana';
+  font-weight: bold;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 38px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  color: #011638;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 0;
+  border-bottom: 5px;
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.lines {
+  text-align: center;
+}
+
+.line1 {
+  display: inline-block;
+  border-bottom: 3px solid #214E34;
+  width: 90px;
+  margin-right: 0;
+}
+
+.line2 {
+  display: inline-block;
+  border-bottom: 3px solid #EBEBEB;
+  width: 270px;
+}
+
+/* h1::before,
+h1::after {
+  content: " ";
+  position: absolute;
+  bottom: 0px;
+  /* margin: 0 auto; */
+/* }
+
+h1:before {
+  border-bottom: 3px solid #214E34;
+  width: 30%;
+}
+
+h1:after{
+	border-bottom: 3px solid #EBEBEB;
+	width: 70%;
+} */
+
+h2{
+font-size: 8px;
+font-weight: normal;
+text-align: center;
+padding-bottom: 50px;
+background-color: #EBEBEB;
+margin: 2em 0;
+padding: 2em;
+width: 330px;
+margin: 0 auto;
+margin-top: 10px;
+margin-bottom: 20px;
+}
+
+#container {
+  width: 170px;
+  margin: 0 auto;
+  color: #46351D;
+}
+
+#board {
+  background: #EBEBEB;
+  padding: 10px;
+  border-radius: 7px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.panel {
+  cursor: pointer;
+  background: #7cc18b;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 0px #214E34;
+  line-height: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.panel.hidden::after {
+  content:'';
+  cursor: pointer;
+  background: lightgray;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 0px lightgray;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+.panel.flipped {
+  background: lightgray;
+  box-shadow: 0px 4px 0px gray;
+}
+
+#btn {
+  cursor: pointer;
+  font-size: 20px;
+  background: #FFAF87;
+  box-shadow: 0px 5px 0px #ce7d5a;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#btn.restart {
+  background: #E3D7FF;
+  box-shadow: 0px 5px 0px #baa8e0;
+}
+
+#btn:hover {
+  opacity: 0.75;
+}
+
+#btn:active {
+  margin-top: 15px;
+  box-shadow: none;
+}
+
+#score {
+  text-align: right;
+  margin: 10px 0px;
+  font-size: 24px;
+
+}

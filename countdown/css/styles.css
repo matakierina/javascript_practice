@@ -1,0 +1,43 @@
+body {
+  font-family: 'Avenir';
+  font-size: 14px;
+  background: #eee;
+}
+
+.container {
+  margin: 20px auto;
+  width:365px;
+  background: #FFFFFF;
+  padding: 15px;
+  text-align: center;
+}
+
+#timer {
+  background: #d3d3d3;
+  height: 120px;
+  line-height: 120px;
+  font-size: 44px;
+  margin-bottom: 15px;
+}
+
+.controls > div {
+  cursor: pointer;
+  user-select: none;
+  width: 80px;
+  height: 45px;
+  line-height: 45px;
+  float: left;
+  background: #d8bfd8;
+}
+
+.controls {
+  overflow: hidden;
+}
+
+.controls > div + div {
+    margin-left: 15px;
+}
+
+.controls > div:hover {
+  opacity: 0.65;
+}

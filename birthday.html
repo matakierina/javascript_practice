@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>誕生日診断</title>
+    <style>
+      body {
+        font-family: YuGothic, sans-serif;
+        font-size: 16px;
+        background: #F9F4F5;
+        color: #2D3A3A;
+        text-align: center;
+
+      }
+
+      h1 {
+        font-weight: normal;
+        position: relative;
+        display: inline-block;
+        padding: 0 80px;
+        margin: 0 auto;
+      }
+
+      h1:before, h1:after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        width: 60px;
+        height: 2px;
+        background-color: #E26D5A;
+      }
+
+      h1:before { left: 0;}
+      h1:after { right: 0;}
+
+      #birthday {
+        margin-top: 30px;
+      }
+
+      #btn {
+        display: inline-block;
+        width: 60px;
+        background: #FFE882;
+        margin-top: 12px;
+        margin-bottom: 50px;
+        padding: 5px;
+        color: #003B36;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 4px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0px 4px 0px #BCAC65;
+      }
+      #btn:hover {
+        opacity: 0.5;
+      }
+      .box {
+        padding: 0.5em 1em;
+        margin: 0 auto;
+        border: double 5px #E26D5A;
+        width: 400px;
+      }
+      .box p {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>誕生日から算出します！</h1>
+    <p>誕生日： <input type="text" name="birthday" id="birthday" value="1990-01-01"></p>
+    <div id="btn" onclick="getAge();">計算</div>
+    <div class="box">
+      <p>生まれてから<span id="daysPast">???</span>日経過しています</p>
+      <p><span id="age"></span>歳ですね？</p>
+    </div>
+    <script>
+      function getAge() {
+        // 入力値の取得
+        var birthday = document.getElementById('birthday').value.split("-");
+
+        // 日付オブジェクトの作成
+        var d1 = new Date(birthday[0], birthday[1]-1, birthday[2]);
+        var d2 = new Date();
+
+        // 日数、年齢の計算
+        var diff = d2.getTime() - d1.getTime();
+        var daysPast = Math.floor(diff / (1000 * 60 * 60 * 24));
+        var age = Math.floor(daysPast / 365.25);
+
+        // 結果の表示
+        document.getElementById('daysPast').innerHTML = daysPast;
+        document.getElementById('age').innerHTML = age;
+      };
+    </script>
+  </body>
+</html>

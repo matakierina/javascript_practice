@@ -1,0 +1,109 @@
+body {
+  background: #d8d8d8;
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+}
+
+.stage {
+  margin: 0 auto;
+  width: 500px;
+  height: 260px;
+  overflow: hidden;
+}
+
+#cards {
+  width: 1500px;
+  height: 260px;
+  transition: 0.8s;
+}
+
+.card {
+  width: 450px;
+  height: 210px;
+  padding: 25px;
+  background: #fff;
+  float: left;
+  border-radius: 10px;
+}
+
+.card + .card {
+  margin-left: 500px;
+}
+
+#cards.move {
+  transform: translate(-1000px, 0);
+}
+
+.left-side {
+  width: 160px;
+  float: left;
+  border-radius: 10px;
+  background-size: cover;
+}
+
+.left-side img {
+  border-radius: 10px;
+}
+
+.right-side {
+  width: 260px;
+  float: right;
+  text-align: center;
+}
+
+.right-side h1 {
+  margin: 10px 0;
+}
+
+.card input {
+  width: 210px;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+.btn {
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  background: #F2D818;
+  box-shadow: 0 5px 0 #CCBD4D;
+  color: #fff;
+  font-weight: bold;
+  line-height: 40px;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: block;
+  text-decoration: none;
+}
+
+#tweet {
+  background: #00aced;
+  box-shadow: 0 5px 0 #0082B2;
+  margin-bottom: 20px;
+}
+
+#result_name,
+#result_msg,
+#result_job,
+#result_type {
+  font-weight: bold;
+}
+
+#retry {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.bg-fire {
+  background-image: url(../img/bg-fire.gif);
+}
+
+.bg-water {
+  background-image: url(../img/bg-water.gif);
+}
+
+.bg-thunder {
+  background-image: url(../img/bg-thunder.gif);
+}
